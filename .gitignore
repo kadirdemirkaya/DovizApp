@@ -1,0 +1,126 @@
+##################################
+# Java
+##################################
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE specific
+/.idea/
+/.vscode/
+/*.iml
+/.project
+/.classpath
+/.settings/
+
+# Build output
+/bin/
+/build/
+/out/
+/target/
+
+##################################
+# Python
+##################################
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+# .env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+##################################
+# React / Node.js
+##################################
+# Dependencies
+/node_modules/
+/bower_components/
+
+# Testing
+/coverage/
+
+# Production build
+/build/
+/dist/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local env files
+# .env
+# .env.local
+# .env.*.local
+
+# Misc
+.DS_Store
+*.swp
+
+##################################
+# Common (not ignoring png images!)
+##################################
+# Ignore all images except PNG
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.bmp
+*.tiff
+*.ico

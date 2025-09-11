@@ -1,0 +1,13 @@
+mcp[cli]
+openai
+fastapi
+python-dotenv
+loguru
+requests
+pytz
+streamlit
+websockets
+websocket-client
+pydantic
+aiohttp
+pyjwt
