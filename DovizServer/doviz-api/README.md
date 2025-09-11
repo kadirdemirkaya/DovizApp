@@ -12,24 +12,24 @@ This project provides a powerful exchange rate API using the [Fawazahmed0 Exchan
 - **Minified JSON**: `/api/v1/rates/{base}/min`
 
 ### 2️⃣ Advanced Endpoints
-- **Filtered Rates**: `/api/v1/rates/{base}?targets=usd,try,gbp`
-- **Date Range**: `/api/v1/rates/{base}/{target}/range?start=2024-01-01&end=2024-12-31`
-- **Crypto Rates**: `/api/v1/crypto/{base}?targets=usd,eur,try`
+- **Filtered Rates**: `/api/v1/rates/{base}`
+- **Date Range**: `/api/v1/rates/{base}/{target}/range?start={date}&end={date}`
+- **Crypto Rates**: `/api/v1/crypto/{base}`
 - **Health Check**: `/api/v1/health`
 
 ## 🛠️Technologies
 
 - **Java 21**
 - **Spring Boot 3.5.5**
-- **Spring WebFlux** (Reactive programming)
+- **Spring WebFlux**
 - **Caffeine Cache**
 - **Lombok**
 - **Maven**
 
 ## 📋Requirements
 
--Java 21+
--Maven 3.6+
+- Java 21+
+- Maven 3.6+
 
 ## 🚀 Installation and Running
 
@@ -68,11 +68,6 @@ GET /api/v1/rates/eur
 GET /api/v1/rate?from=eur&to=try
 ''''
 
-### Flexible Rates Only (USD, TRY, GBP)
-``` bash
-GET /api/v1/rates/eur?targets=usd,try,gbp
-''''
-
 ### Date Rates
 ``` bash
 GET /api/v1/rates/eur/2024-03-06
@@ -85,7 +80,7 @@ GET /api/v1/rates/eur/try/range?start=2024-01-01&end=2024-03-06
 
 ### Crypto Rates
 ``` bash
-GET /api/v1/crypto/btc?targets=usd,eur,try
+GET /api/v1/crypto/btc
 ''''
 
 ### Minified JSON
@@ -98,23 +93,17 @@ GET /api/v1/rates/eur/min
 You can find the following settings in the `application.properties` file:
 
 ````properties
-# Server
 server.port=8080
 server.servlet.context-path=/api
 
-# External API
 app.external-api.base-url=https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1
 app.external-api.timeout=10000
 app.external-api.cache-ttl=300
-
-# Cache
-spring.cache.type=caffeine
-spring.cache.caffeine.spec=maximumSize=1000,expireAfterWrite=5m
 ```
 
 ## 📊 Cache Strategy
 
-- **Currencies**: 5 minutes
-- **Currencies**: 5 minutes
-- **Historical Rates**: 5 minutes
+- **Currencies**: 10 minutes
+- **Currencies**: 10 minutes
+- **Historical Rates**: 10 minutes
 - **Maximum Cache Size**: 1000 entries
